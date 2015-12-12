@@ -1,22 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PointOfInterest : MonoBehaviour {
-    [SerializeField]
-    private Transform m_PlayerObject;
+public class PointOfInterest : MonoBehaviour
+{
+    public string name;
+    public bool initialPOI = false;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () { 
-	}
+    // Use this for initialization
+    void Start()
+    {
+        if (initialPOI)
+            Player.EnterPOI(transform, this);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
 
     void OnMouseDown()
     {
-        m_PlayerObject.transform.position = transform.position;
-
+        Player.EnterPOI(transform, this);
     }
 }
