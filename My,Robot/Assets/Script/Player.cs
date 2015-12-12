@@ -1,26 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class Player : MonoBehaviour
+namespace Assets.Script
 {
-    public static PointOfInterest currPointOfInterest;
-    public static Transform playerTransform;
-
-    // Use this for initialization
-    void Start()
+    public class Player : MonoBehaviour
     {
-        playerTransform = transform;
-    }
+        public PointOfInterest currPointOfInterest;
+        public Transform playerTransform;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(currPointOfInterest.name);
-    }
+        public ResourceDataCollection resources;
 
-    public static void EnterPOI(Transform loc, PointOfInterest poi)
-    {
-        playerTransform.position = loc.position;
-        currPointOfInterest = poi;
+        // Use this for initialization
+        void Start()
+        {
+            PointOfInterest.player = this;
+            playerTransform = transform;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            Debug.Log(currPointOfInterest.name);
+        }
+
+        public void EnterPOI(Transform loc, PointOfInterest poi)
+        {
+            playerTransform.position = loc.position;
+            currPointOfInterest = poi;
+        }
     }
 }

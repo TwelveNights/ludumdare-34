@@ -11,16 +11,16 @@ My,Robot/sysinfo.txt
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-[Ee]xported[Oo]bj/
-.vs/
-/*.userprefs
-/*.csproj
-/*.pidb
-/*.suo
-/*.sln*
-/*.user
-/*.unityproj
-/*.booproj
+My,Robot/[Ee]xported[Oo]bj/
+My,Robot/.vs/
+My,Robot/*.userprefs
+My,Robot/*.csproj
+My,Robot/*.pidb
+My,Robot/*.suo
+My,Robot/*.sln*
+My,Robot/*.user
+My,Robot/*.unityproj
+My,Robot/*.booproj
  
 # ============ #
 # OS generated #
