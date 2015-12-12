@@ -1,10 +1,10 @@
 # =============== #
 # Unity generated #
 # =============== #
-My,Robot/[Tt]emp/
-My,Robot/[Oo]bj/
-My,Robot/[Bb]uild
-My,Robot/[Ll]ibrary/
+My,Robot/[Tt]emp/*
+My,Robot/[Oo]bj/*
+My,Robot/[Bb]uild/*
+My,Robot/[Ll]ibrary/*
 My,Robot/sysinfo.txt
 *.stackdump
  
