@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UnityEngine;
 
 namespace Assets.Script
 {
-    public class POIAction : MonoBehaviour
+    class ModuleAction
     {
-
-        public virtual void DoAction() { }
     }
 }

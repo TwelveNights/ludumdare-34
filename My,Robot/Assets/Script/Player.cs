@@ -7,7 +7,6 @@ namespace Assets.Script
     public class Player : MonoBehaviour
     {
         public PointOfInterest currPointOfInterest;
-        public Transform playerTransform;
 
         public ResourceDataCollection resources;
 
@@ -15,7 +14,6 @@ namespace Assets.Script
         void Start()
         {
             PointOfInterest.player = this;
-            playerTransform = transform;
         }
 
         // Update is called once per frame
@@ -26,7 +24,7 @@ namespace Assets.Script
 
         public void EnterPOI(Transform loc, PointOfInterest poi)
         {
-            playerTransform.position = loc.position;
+            transform.position = loc.position;
             currPointOfInterest = poi;
         }
     }

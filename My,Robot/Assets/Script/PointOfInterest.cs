@@ -20,13 +20,16 @@ namespace Assets.Script
         void Start()
         {
             if (initialPOI) player.EnterPOI(transform, this);
-            //actions.AddRange(GetComponents<POIAction>());
+            actions.AddRange(GetComponents<POIAction>());
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (player.currPointOfInterest == this) GatherResource();
+            if (player.currPointOfInterest == this)
+            {
+                GatherResource();
+            }
         }
 
         protected void GatherResource()
@@ -54,18 +57,13 @@ namespace Assets.Script
                 player.EnterPOI(transform, this);
                 foreach (string key in resourceToModify) player.resources[key].resourceGatheringElapsedTime = 0;
             }
-            /*
             else
             {
-                foreach(string key in resourceToModify)
-                {
-                    Player.resourceCount[key] += resourceModifiers[resourceToModify.IndexOf(key)];
-                }
                 foreach(POIAction action in actions)
                 {
                     action.DoAction();
                 }
-            }*/
+            }
         }
     }
 }
