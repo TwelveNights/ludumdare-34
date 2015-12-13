@@ -7,6 +7,11 @@ namespace Assets.Script
 {
     public class PointOfInterest : MonoBehaviour
     {
+		public PointOfInterest(string inName)  //Constructor for the creation of PoIs in the RandomMapGeneration.cs
+		{
+			name = inName;
+		}
+
         public static Player player;
 
         public string name;
