@@ -6,21 +6,24 @@ My,Robot/[Oo]bj/*
 My,Robot/[Bb]uild/*
 My,Robot/[Ll]ibrary/*
 My,Robot/sysinfo.txt
+My,Robot\Assets\Art\chrome\*.meta
+My,Robot\Assets\Art\doodads\*.meta
+My,Robot\Assets\Art\sprites\*.meta
 *.stackdump
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-My,Robot/[Ee]xported[Oo]bj/
-My,Robot/.vs/
-My,Robot/*.userprefs
-My,Robot/*.csproj
-My,Robot/*.pidb
-My,Robot/*.suo
-My,Robot/*.sln*
-My,Robot/*.user
-My,Robot/*.unityproj
-My,Robot/*.booproj
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
  
 # ============ #
 # OS generated #
@@ -32,3 +35,4 @@ My,Robot/*.booproj
 Icon?
 ehthumbs.db
 [Tt]humbs.db
+*.meta
