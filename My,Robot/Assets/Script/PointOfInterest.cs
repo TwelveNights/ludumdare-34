@@ -7,9 +7,6 @@ namespace Assets.Script
 {
     public class PointOfInterest : MonoBehaviour
     {
-        
-        public static Player player;
-
         public string m_POIName;
         public bool initialPOI = false;
 
@@ -23,14 +20,14 @@ namespace Assets.Script
         void Start()
         { 
             m_POIName = gameObject.name;
-            if (initialPOI) player.EnterPOI(transform, this);
+            if (initialPOI) GameInfo.player.EnterPOI(transform, this);
             actions.AddRange(GetComponents<POIAction>());
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (player.currPointOfInterest == this)
+            if (GameInfo.player.currPointOfInterest == this)
             {
                 GatherResource();
             }
@@ -40,26 +37,26 @@ namespace Assets.Script
         {
             foreach (string key in resourceToModify)
             {
-                ResourceData resource = player.resources[key];
+                ResourceData resource = GameInfo.player.resources[key];
 
-                if(resource.resourceGatheringElapsedTime >= resource.resourceGatheringRate)
+                if(resource.ResourceGatheringElapsedTime >= resource.ResourceGatheringRate)
                 {
-                    resource.resourceCount += resource.resourceGatheringAmount; //* >>location gathering modifier<< 
-                    resource.resourceGatheringElapsedTime = 0;
+                    resource.ResourceCount += resource.ResourceGatheringAmount; //* >>location gathering modifier<< 
+                    resource.ResourceGatheringElapsedTime = 0;
                 }
                 else
                 {
-                    resource.resourceGatheringElapsedTime += Time.deltaTime;
+                    resource.ResourceGatheringElapsedTime += Time.deltaTime;
                 }
             }
         }
 
         void OnMouseDown()
         {
-            if (player.currPointOfInterest != this)
+            if (GameInfo.player.currPointOfInterest != this)
             {
-                player.EnterPOI(transform, this);
-                foreach (string key in resourceToModify) player.resources[key].resourceGatheringElapsedTime = 0;
+                GameInfo.player.EnterPOI(transform, this);
+                foreach (string key in resourceToModify) GameInfo.player.resources[key].ResourceGatheringElapsedTime = 0;
             }
             else
             {

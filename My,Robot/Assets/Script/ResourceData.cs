@@ -16,7 +16,7 @@ namespace Assets.Script
             {
                 foreach (ResourceData resource in resources)
                 {
-                    if (resource.name == key)
+                    if (resource.Name == key)
                         return resource;
                 }
 
@@ -26,7 +26,7 @@ namespace Assets.Script
             {
                 foreach (ResourceData resource in resources)
                 {
-                    if (resource.name == key)
+                    if (resource.Name == key)
                         resources[resources.IndexOf(resource)] = value;
                 }
 
@@ -39,11 +39,11 @@ namespace Assets.Script
     [System.Serializable]
     public class ResourceData
     {
-        public string name;
-        public float resourceCount;
-        public float resourceGatheringRate;
-        public float resourceGatheringElapsedTime;
-        public float resourceGatheringAmount;
-        public float resourceMax;
+        public string Name;
+        public float ResourceCount;
+        public float ResourceGatheringRate;
+        public float ResourceGatheringElapsedTime;
+        public float ResourceGatheringAmount;
+        public float ResourceMax;
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Script.Module.UI
+namespace Assets.Script.Modules.UI
 {
     class CloseButton : MonoBehaviour
     {
