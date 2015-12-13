@@ -7,7 +7,7 @@ namespace Assets.Script
 {
     [System.Serializable]
     public class ResourceDataCollection
-    {
+    {   
         public List<ResourceData> resources;
 
         public ResourceData this[string key]
