@@ -35,7 +35,8 @@ My,Robot\Assets\Art\sprites\*.meta
 Icon?
 ehthumbs.db
 [Tt]humbs.db
-*.meta
+
+## CUSTOM ##
 *.csproj
 *.suo
 *.sln
