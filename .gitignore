@@ -37,3 +37,8 @@ ehthumbs.db
 [Tt]humbs.db
 *.meta
 .gitconfig
+
+## CUSTOM ##
+*.csproj
+*.suo
+*.sln
