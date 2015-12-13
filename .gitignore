@@ -10,7 +10,7 @@ My,Robot\Assets\Art\chrome\*.meta
 My,Robot\Assets\Art\doodads\*.meta
 My,Robot\Assets\Art\sprites\*.meta
 *.stackdump
- 
+
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
@@ -36,3 +36,4 @@ Icon?
 ehthumbs.db
 [Tt]humbs.db
 *.meta
+.gitconfig
