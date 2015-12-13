@@ -7,18 +7,22 @@ namespace Assets.Script
 {
     public class PointOfInterest : MonoBehaviour
     {
+        
         public static Player player;
 
-        public string name;
+        public string m_POIName;
         public bool initialPOI = false;
 
         public List<string> resourceToModify = new List<string>();
 
         public List<POIAction> actions = new List<POIAction>();
 
+
+
         // Use this for initialization
         void Start()
-        {
+        { 
+            m_POIName = gameObject.name;
             if (initialPOI) player.EnterPOI(transform, this);
             actions.AddRange(GetComponents<POIAction>());
         }

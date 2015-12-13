@@ -10,16 +10,21 @@ namespace Assets.Script
 
         public ResourceDataCollection resources;
 
+        void Awake()
+        {
+            PointOfInterest.player = this;
+        }
+
         // Use this for initialization
         void Start()
         {
-            PointOfInterest.player = this;
+            
         }
 
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(currPointOfInterest.name);
+            Debug.Log(currPointOfInterest.m_POIName);
         }
 
         public void EnterPOI(Transform loc, PointOfInterest poi)
