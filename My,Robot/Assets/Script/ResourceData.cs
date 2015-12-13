@@ -26,10 +26,11 @@ namespace Assets.Script
             {
                 foreach (ResourceData resource in resources)
                 {
-                    if (resource.name == key)
+                    if (resource.name == key) {
                         resources[resources.IndexOf(resource)] = value;
+                        return;
+                    }
                 }
-
                 throw new NullReferenceException();
             }
         }

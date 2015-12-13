@@ -2,8 +2,6 @@
  */
 
 using UnityEngine;
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic; 	//for lists
 using Random = UnityEngine.Random;
 using Assets.Script;
@@ -38,7 +36,7 @@ namespace Assets.RandomMapGeneration
 		{
 			mapCoordinates.Clear ();
 
-			for(float x = minX; x <= maxX; x+= xDis)
+			for(float x = minX; x <= maxX; x += xDis)
 			{
 				for (float y = minY; y < maxY; y+= yDis){
 					if (x <= minX+0.1 || x >= maxX-0.1 || y >= maxY-0.1 || y <= minY+0.1) {
@@ -97,7 +95,6 @@ namespace Assets.RandomMapGeneration
 		}
 		// Update is called once per frame
 		void Update () {
-
 		}
 	}
 }
