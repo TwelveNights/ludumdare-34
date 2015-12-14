@@ -13,9 +13,7 @@ namespace Assets.Script.Modules.UI
         private List<Module> availableModules;
         public List<ResourceModule> availableResourceModules;
 
-        public Transform UIModel;
-
-        public float a;
+        public GameObject UIModel;
 
         void Start()
         {
@@ -28,7 +26,7 @@ namespace Assets.Script.Modules.UI
 
                 GameObject obj = Instantiate(UIModel, transform.position, Quaternion.identity) as GameObject; 
                 RectTransform rect = obj.GetComponent<RectTransform>();
-                rect.position = transform.position + Vector3.down * a + Vector3.down * rect.rect.height * i * 2;
+                rect.position = transform.position + Vector3.down + Vector3.down * rect.rect.height * i * 2;
 
                 Text text = obj.GetComponentInChildren<Text>();
                 text.text = currModule.Name;

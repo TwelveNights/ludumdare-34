@@ -113,6 +113,40 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11446950}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11446950}
+          m_MethodName: UnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
 --- !u!114 &11446950
 MonoBehaviour:
@@ -140,6 +174,8 @@ MonoBehaviour:
   origPos: {x: 0, y: 0}
   failedSound: {fileID: 8300000, guid: 80abac8ba1a4a534b93e640c6a1f0b9e, type: 3}
   donModule: {fileID: 8300000, guid: 1f8d869d8a1b69343a2ed6e350655c01, type: 3}
+  infoButton: {fileID: 0}
+  textBox: {fileID: 144386, guid: 5f2464021dff7d44cbe860e9edc24d20, type: 2}
 --- !u!114 &11486800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,7 +259,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Delegates.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: ShakePositions.Array.size
@@ -312,7 +348,7 @@ Prefab:
       objectReference: {fileID: 22439754}
     - target: {fileID: 0}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_parent
+      value: Hover
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -363,6 +399,14 @@ Prefab:
       propertyPath: donModule
       value: 
       objectReference: {fileID: 8300000, guid: 1f8d869d8a1b69343a2ed6e350655c01, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnHover
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 144386, guid: 5f2464021dff7d44cbe860e9edc24d20, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114024}

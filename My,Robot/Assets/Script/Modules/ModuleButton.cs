@@ -25,6 +25,9 @@ namespace Assets.Script.Modules
         public AudioClip failedSound;
         public AudioClip donModule;
 
+        public GameObject infoButton;
+        public GameObject textBox;
+
         public void Press()
         {
             if(module.Build())
@@ -49,6 +52,23 @@ namespace Assets.Script.Modules
                 audio.clip = failedSound;
                 audio.Play();
             }
+        }
+
+        public void Hover()
+        {
+            Debug.Log(":ASDASD:");
+            infoButton = Instantiate(textBox, transform.position, Quaternion.identity) as GameObject;
+            infoButton.transform.Translate(new Vector3(160, -40, 0));
+
+            UnityEngine.UI.Text text = infoButton.GetComponentInChildren<UnityEngine.UI.Text>();
+            text.text = module.CreationCosts[0].ResourceName + ": " + module.CreationCosts[0].ResourceAmount;
+
+            infoButton.transform.SetParent(transform.parent);
+        }
+
+        public void UnHover()
+        {
+            Destroy(infoButton);
         }
 
         public void Update()
