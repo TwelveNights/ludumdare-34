@@ -72,7 +72,8 @@ namespace Assets.RandomMapGeneration
 		{
 			GameObject instance = null;
 			Vector3 randomVector = RandomPosition ();
-			instance = Instantiate (type, randomVector, Quaternion.identity) as GameObject;
+			instance = Instantiate (type) as GameObject;
+            instance.transform.position = new Vector3(randomVector.x, randomVector.y, instance.transform.position.z);
 			instance.transform.SetParent (transform);
 		}
 
