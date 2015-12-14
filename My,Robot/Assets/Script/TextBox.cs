@@ -18,6 +18,8 @@ namespace Assets.Script
         [SerializeField]
         private int Delay = 30;
         private int DelayCounter;
+        [SerializeField]
+        GameObject TextDisplay;
 
         // Use this for initialization
         public void Start()
@@ -55,6 +57,11 @@ namespace Assets.Script
                 }
 
                 else Counter++;
+            }
+
+            if (Queue.Count == 0 && RenderedText == "" && FullText == "")
+            {
+                TextDisplay.SetActive(false);
             }
         }
 

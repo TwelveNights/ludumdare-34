@@ -11,7 +11,7 @@ namespace Assets.Script
 
         public ResourceDataCollection resources;
 
-        private List<Module> attachedModules;
+        private List< Module > attachedModules;
 
         void Awake()
         {
