@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-namespace Assets.Script
+namespace Assets.Script.DialogueSystem
 {
     public class TextBox : MonoBehaviour
     {
