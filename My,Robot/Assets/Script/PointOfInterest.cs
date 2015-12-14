@@ -38,6 +38,39 @@ namespace Assets.Script
             }
         }
 
+        public void OnCollisionEnter2D(Collision2D coll)
+        {
+            if (coll.gameObject == GameInfo.player.gameObject)
+            {
+                if (GameInfo.player.currPointOfInterest != this)
+                {
+                    GameInfo.EndAllActiveActions();
+                    GameInfo.player.currPointOfInterest = this;
+                    foreach (string key in resourceToModify) GameInfo.player.resources[key].ResourceGatheringElapsedTime = 0;
+
+                    foreach (POIAction action in actions)
+                    {
+                        action.DoAction();
+                    }
+                }
+            }
+        }
+
+        public void OnCollisionExit2D(Collision2D coll)
+        {
+            if (coll.gameObject == GameInfo.player.gameObject)
+            {
+                if (GameInfo.player.currPointOfInterest == this)
+                {
+                    foreach (POIAction action in actions)
+                    {
+                        action.EndAction();
+                    }
+                }
+            }
+        }
+
+
         protected void GatherResource()
         {
             foreach (string key in resourceToModify)
@@ -72,7 +105,7 @@ namespace Assets.Script
 
         }
 
-        void OnMouseDown()
+        /*void OnMouseDown()
         {
             if (GameInfo.player.currPointOfInterest != this)
             {
@@ -85,6 +118,6 @@ namespace Assets.Script
                     action.DoAction();
                 }
             }
-        }
+        }*/
     }
 }
