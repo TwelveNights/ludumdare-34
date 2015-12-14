@@ -33,6 +33,7 @@ namespace Assets.Script.Modules
             if(module.Build())
             {
                 AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+                audio.loop = false;
                 audio.clip = donModule;
                 audio.Play();
                 BuildModule();
@@ -43,12 +44,14 @@ namespace Assets.Script.Modules
                 isShaking = true;
 
                 AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+                audio.loop = false;
                 audio.clip = failedSound;
                 audio.Play();
             }
             else
             {
                 AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+                audio.loop = false;
                 audio.clip = failedSound;
                 audio.Play();
             }
