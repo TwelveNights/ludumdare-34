@@ -28,5 +28,12 @@ namespace Assets.Script
             
             base.DoAction();
         }
+
+        public override void EndAction()
+        {
+            UIModule.SetActive(false);
+            
+            base.EndAction();
+        }
     }
 }

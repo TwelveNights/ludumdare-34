@@ -39,7 +39,7 @@ namespace Assets.Script
 
         public void EnterPOI(Transform loc, PointOfInterest poi)
         {
-            transform.position = loc.position;
+            transform.position = new Vector3(loc.position.x, loc.position.y, transform.position.z);
             currPointOfInterest = poi;
         }
     }
@@ -47,5 +47,20 @@ namespace Assets.Script
     public static class GameInfo
     {
         public static Player player;
+
+        public static List<POIAction> ActiveActions = new List<POIAction>();
+
+        /// <summary>
+        /// Kludgy Solution for deactivating Module Menu when the player leaves the workshop.
+        /// </summary>
+        public static void EndAllActiveActions()
+        {
+            for(int i=0; i<ActiveActions.Count; i++)
+            {
+                ActiveActions[i].EndAction();
+                ActiveActions.RemoveAt(i);
+                i--;
+            }
+        }
     }
 }
