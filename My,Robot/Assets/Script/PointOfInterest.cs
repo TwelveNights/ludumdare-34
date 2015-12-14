@@ -44,7 +44,7 @@ namespace Assets.Script
             {
                 if (GameInfo.player.currPointOfInterest != this)
                 {
-                    GameInfo.EndAllActiveActions();
+                    //GameInfo.EndAllActiveActions();
                     GameInfo.player.currPointOfInterest = this;
                     foreach (string key in resourceToModify) GameInfo.player.resources[key].ResourceGatheringElapsedTime = 0;
 
@@ -62,6 +62,7 @@ namespace Assets.Script
             {
                 if (GameInfo.player.currPointOfInterest == this)
                 {
+                    GameInfo.player.currPointOfInterest = null;
                     foreach (POIAction action in actions)
                     {
                         action.EndAction();
@@ -79,7 +80,7 @@ namespace Assets.Script
 
                 if(resource.ResourceGatheringElapsedTime >= resource.ResourceGatheringRate)
                 {
-                    resource.ResourceCount += resource.ResourceGatheringAmount; //* >>location gathering modifier<< 
+                    resource.AddResource(resource.ResourceGatheringAmount); //* >>location gathering modifier<< 
                     resource.ResourceGatheringElapsedTime = 0;
 
                     AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();

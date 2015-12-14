@@ -8,6 +8,16 @@ using UnityEngine.UI;
 
 namespace Assets.Script.Modules
 {
+    [System.Serializable]
+    public class ResourceCost
+    {
+        public string ResourceName;
+        public float ResourceAmount;
+
+    }
+
+
+
     /// <summary>
     /// Modules modify
     /// - Resource Gathering Speed
@@ -18,11 +28,13 @@ namespace Assets.Script.Modules
     public class Module
     {
         public enum ModifierType { Adittive, Multiplicative, Subtractive, Divisive };
-    
+
         public string Name;
+        public List<ResourceCost> CreationCosts;
 
         public float Modifier;
         public ModifierType ValModType;
+
     
         protected virtual float ModifyValue(float val)
         {
@@ -48,6 +60,29 @@ namespace Assets.Script.Modules
         }
 
         public virtual void ApplyModule(Player player) { }
+
+        public bool CanBuild()
+        {
+            bool result = true;
+            foreach(ResourceCost cost in CreationCosts)
+            {
+                result &= GameInfo.player.resources[cost.ResourceName].ResourceCount >= cost.ResourceAmount;
+            }
+
+            return result;
+        }
+
+        public bool Build()
+        {
+            if (!CanBuild()) return false;
+
+            foreach (ResourceCost cost in CreationCosts)
+            {
+                GameInfo.player.resources[cost.ResourceName].AddResource(-cost.ResourceAmount);
+            }
+
+            return true;
+        }
     }
 
     [System.Serializable]

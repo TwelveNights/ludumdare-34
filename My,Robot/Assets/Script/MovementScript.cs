@@ -35,9 +35,7 @@ public class MovementScript : MonoBehaviour
 
 
             Vector2 movementVectorLocal = mousePosition - playerPosition;
-            Debug.Log("Pre-normalize " + movementVectorLocal);
             movementVectorLocal.Normalize();
-            Debug.Log("Post-normalize " + movementVectorLocal);
 
             angle = Vector2.Angle(playerPosition, mousePosition);
 

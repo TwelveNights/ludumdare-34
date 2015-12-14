@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Script
 {
@@ -33,6 +35,13 @@ namespace Assets.Script
                 throw new NullReferenceException();
             }
         }
+
+        public void UpdateUI()
+        {
+            Debug.Log("Holla");
+            foreach (ResourceData res in resources)
+                res.UpdateUI();
+        }
     }
 
 
@@ -45,5 +54,17 @@ namespace Assets.Script
         public float ResourceGatheringElapsedTime;
         public float ResourceGatheringAmount;
         public float ResourceMax;
+        public Text UIText;
+
+        public void UpdateUI()
+        {
+            UIText.text = ResourceCount + "/" + ResourceMax;
+        }
+
+        public void AddResource(float val)
+        {
+            ResourceCount += val;
+            ResourceCount = Math.Min(ResourceCount, ResourceMax);
+        }
     }
 }

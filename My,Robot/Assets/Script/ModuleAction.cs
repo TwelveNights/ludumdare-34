@@ -25,7 +25,8 @@ namespace Assets.Script
         {
             UIModule.SetActive(true);
            // UIModule.GetComponent<Text
-            
+            Debug.Log("DoAction");
+
             base.DoAction();
         }
 

@@ -92,7 +92,6 @@ namespace Assets.RandomMapGeneration
 			CreateCoordinates ();
 
 			CreateMap ();
-			Debug.Log ("hello");
 		}
 		// Update is called once per frame
 		void Update () {

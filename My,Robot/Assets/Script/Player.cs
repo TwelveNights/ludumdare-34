@@ -34,7 +34,8 @@ namespace Assets.Script
         // Update is called once per frame
         void Update()
         {
-           // Debug.Log(currPointOfInterest.m_POIName);
+            // Debug.Log(currPointOfInterest.m_POIName);
+            resources.UpdateUI();
         }
 
         public void EnterPOI(Transform loc, PointOfInterest poi)
