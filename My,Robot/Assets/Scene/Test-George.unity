@@ -469,6 +469,7 @@ GameObject:
   - 4: {fileID: 338551912}
   - 212: {fileID: 338551911}
   - 114: {fileID: 338551913}
+  - 114: {fileID: 338551914}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -551,6 +552,17 @@ MonoBehaviour:
       ResourceGatheringElapsedTime: 0
       ResourceGatheringAmount: 3
       ResourceMax: 200
+--- !u!114 &338551914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338551910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc69b980cd6c7a418c673b4d1a6271b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &345323379
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +623,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.57
+  orthographic size: 2.95
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

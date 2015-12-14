@@ -24,10 +24,10 @@ namespace Assets.RandomMapGeneration
 
 		public float xDis = .32f;
 		public float yDis = .32f;
-		public float minX = -2.72;
-		public float minY = -2.72;
-		public float maxX = 3.04;
-		public float maxY = 3.04;
+		public float minX = -2.72f;
+		public float minY = -2.72f;
+		public float maxX = 3.04f;
+		public float maxY = 3.04f;
 
 		private Transform mapHolder;
 		private List <Vector3> mapCoordinates = new List <Vector3> ();
@@ -41,11 +41,6 @@ namespace Assets.RandomMapGeneration
 			for(float x = minX; x <= maxX; x+= xDis)
 			{
 				for (float y = minY; y < maxY; y+= yDis){
-					if (x <= minX+0.1 || x >= maxX-0.1 || y >= maxY-0.1 || y <= minY+0.1) {
-						GameObject instance;
-						instance = Instantiate (tree, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
-						instance.transform.SetParent (transform);
-					}
 
 					if(x < -1 || y < -1 || y > 1 || x > 1)
 					mapCoordinates.Add (new Vector3 (x, y, 0f));
