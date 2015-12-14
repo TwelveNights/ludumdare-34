@@ -24,10 +24,10 @@ namespace Assets.RandomMapGeneration
 
 		public float xDis = .32f;
 		public float yDis = .32f;
-		public float minX = -2.72;
-		public float minY = -2.72;
-		public float maxX = 3.04;
-		public float maxY = 3.04;
+		public float minX = -2.72f;
+		public float minY = -2.72f;
+		public float maxX = 3.04f;
+		public float maxY = 3.04f;
 
 		private Transform mapHolder;
 		private List <Vector3> mapCoordinates = new List <Vector3> ();

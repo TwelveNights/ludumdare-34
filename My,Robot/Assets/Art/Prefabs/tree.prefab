@@ -89,6 +89,8 @@ MonoBehaviour:
   actions: []
   isResource: 0
   availableGathers: -1
+  resourceGained: {fileID: 8300000, guid: 98fbe3fad77acdf40826ec797f9c5ab7, type: 3}
+  resourceDeplete: {fileID: 8300000, guid: dea55253bcd5a504b8efb57e2d8f412c, type: 3}
 --- !u!212 &21298882
 SpriteRenderer:
   m_ObjectHideFlags: 1

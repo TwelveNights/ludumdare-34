@@ -17,6 +17,9 @@ namespace Assets.Script
         public bool isResource;
         public int availableGathers;
 
+        public AudioClip resourceGained;
+        public AudioClip resourceDeplete;
+
 
         // Use this for initialization
         void Start()
@@ -45,10 +48,19 @@ namespace Assets.Script
                 {
                     resource.ResourceCount += resource.ResourceGatheringAmount; //* >>location gathering modifier<< 
                     resource.ResourceGatheringElapsedTime = 0;
+
+                    AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+                    audio.clip = resourceGained;
+                    audio.Play();
+
                     if (availableGathers >= 0)
                     {
-                        if(--availableGathers == 0) Destroy(gameObject);
-                
+                        if (--availableGathers == 0)
+                        {
+                            audio.clip = resourceDeplete;
+                            audio.Play();
+                            Destroy(gameObject);
+                        }
                     }
                 }
                 else
