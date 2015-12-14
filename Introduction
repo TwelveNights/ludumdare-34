@@ -1,0 +1,117 @@
+Introduction
+"..................................................................."
+
+"Looks like it's finally done! Now, how does this thing turn on?" she asked.
+"I hope everything is connected properly... All these parts are hard to come by nowadays," she said.
+"Oooh, I think it's working," she said.
+"Hey there! It seems like you're awake," she said.
+"Can you understand me? At the very least, I'm pretty sure nobody's better than me in the field of natural language processing," she said.
+"My name's Lily, what's your name?" Lily asked.
+
+...
+
+"Oh wait, I guess there's no point in asking. I don't know what type of voice would suit you, so I haven't worked out those detail yet," Lily said.
+"Also, I don't really know how giving you a voice will work, but I'll check it out later."
+"Anyways, I'll be happy to keep you around. Nobody else to have for company, otherwise," Lily said.
+"Now - let's test this out! My first diary entry!" Lily said.
+
+"Begin Recording"
+"Entry 1: A Brand New Day - ID fff8b5f"
+"Hey there! This will be my first diary entry. Not much has changed in the last few months, but I began working on a few projects. The water collection system somehow manages to stay intact, with the help of a few minor repairs from time to time. Aside from that, I have enough electricity to kill off boredom and enough instant noodles to live comfortably, hehehe. The robot is finally complete, and I'll try to update as much as possible."
+
+"This is Lily, April 10th."
+"End Recording"
+
+"Maybe when I'm feeling up for it, I'll add some cool stuff to you," Lily said.
+"That's all for today, though. I'm tired," Lily said.
+
+The faint sound of a kettle whistling can be heard in the room as I am shut off.
+
+---
+
+"Begin Recording"
+"Entry 2: My Second Recording - ID a764598"
+"Hey there! So, I fell asleep right after finishing up last night's entry, and it is honestly so boring just sitting around. I'll head out today to explore and see if I can find anything cool today as well. There are a few blueprints I found in my grandpa's basement that seem to be different ways to upgrade the robot, so I'll also look at them today. I have more to say but I really need to go to the bathroom right now, so maybe some other time..."
+
+"This is Lily, April 11th."
+"End Recording"
+
+"I won't make it!" Lily said, in a rather panicked tone.
+
+---
+
+"Hey there! It's been a while since my last update, but there just hasn't been much to talk about," Lily said.
+"Check out these occular adjustments! What do you see when you look around, I wonder?" Lily said.
+"Anyways, I've been feeling pretty lazy these past few days, so you'll be doing chores starting today to earn your keep," Lily said.
+"First, let's just test the motor functions..." Lily said.
+"Robot, go get that rock for me from that corner!" Lily commanded.
+
+"Hmmm, I guess it might still need a bit more work," Lily said.
+"Now onto the diary entry. Uwah I keep forgetting to do these!" Lily said.
+
+"Begin Recording"
+"Entry 3: The Sad Robot - ID dd611f5"
+"Hey there! So, this robot can see the world now! With its newfound powers, I'll have to get it to do stuff that I'm too lazy to do. For starters, harvesting resources to repair my house from time to time would be nice. Just last week a storm nearly killed my water collector. Having another one wouldn't hurt, but that would take me aaages to finish building. For the time being, I'll have to rely on just the one. Hopefully things get easier just by having this robot around. It took me an hour just to turn it on today, since I was so scared that some stupid bug would kill the poor robot, but it looks good to go! Implementing vision was a success, and following these blueprints have really helped me out!"
+
+"This is Lily, April 17th."
+"End Recording"
+
+---
+
+"Hey there!" Lily said.
+// TODO
+
+---
+
+"Begin Recording"
+"Entry 7: Untitled - ID 9a44686"
+"Cup noodles ran out."
+
+"End Recording"
+
+---
+
+-------------------------------------------------------------------------------------------------------------------------
+Sickness Indicators
+Healthy:
+"I'm feeling pretty good today!"
+
+Sick:
+"Let me stay in bed today. I don't feel so well."
+
+
+Health Indicators
+Good:
+"Today's a nice day for a walk."
+
+Poor:
+"This looks like this is the end for me... Thanks for keeping me company."
+
+Food Indicators
+High:
+"Just looking at all this food is making me hungry."
+
+Medium:
+"I'll still be able to manage for some time with all this food... I hope."
+"Life isn't the same without cup noodles..."
+
+Low:
+"I'm too tired to chat right now."
+"Time to go back to bed and dream about food."
+
+None:
+"I really wish I had some cup noodles, or anything, for that matter.."
+
+Water Indicators
+High:
+"Guess I won't have to do something weird like filtrate my pee!"
+
+Medium:
+"Filtering pee now actually doesn't seem that bad of an idea."
+
+Low:
+"I'm starting to have dreams of swimming in pools of cup noodle broth."
+"I feel like a sundried tomato..."
+
+None:
+"It sort of hurts to speak. Leave me alone."
