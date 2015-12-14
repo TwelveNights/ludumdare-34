@@ -131,10 +131,15 @@ MonoBehaviour:
     Modifier: 0
     ValModType: 0
   menu: {fileID: 0}
-  shakeTime: 2
+  shakeTime: 1
+  currShakeTime: 0
   ShakePositions:
-  - {x: -1, y: 0}
-  - {x: 1, y: 0}
+  - {x: -20, y: 0}
+  - {x: 20, y: 0}
+  isShaking: 0
+  origPos: {x: 0, y: 0}
+  failedSound: {fileID: 8300000, guid: 80abac8ba1a4a534b93e640c6a1f0b9e, type: 3}
+  donModule: {fileID: 8300000, guid: 1f8d869d8a1b69343a2ed6e350655c01, type: 3}
 --- !u!114 &11486800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,16 +337,32 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: shakeTime
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: ShakePositions.Array.data[0].x
-      value: -1
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: ShakePositions.Array.data[1].x
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ShakePositions.Array.data[0].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ShakePositions.Array.data[1].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: failedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 80abac8ba1a4a534b93e640c6a1f0b9e, type: 3}
+    - target: {fileID: 0}
+      propertyPath: donModule
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f8d869d8a1b69343a2ed6e350655c01, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114024}
