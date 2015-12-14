@@ -24,10 +24,10 @@ namespace Assets.RandomMapGeneration
 
 		public float xDis = .32f;
 		public float yDis = .32f;
-		public float minX = -4;
-		public float minY = -4;
-		public float maxX = 4;
-		public float maxY = 4;
+		public float minX = -2.72;
+		public float minY = -2.72;
+		public float maxX = 3.04;
+		public float maxY = 3.04;
 
 		private Transform mapHolder;
 		private List <Vector3> mapCoordinates = new List <Vector3> ();
@@ -59,12 +59,15 @@ namespace Assets.RandomMapGeneration
 
 				if (treelimit > 0) {
 					CreateInstance (tree);
+					treelimit--;
 				}
 				if (rocklimit > 0) {
 					CreateInstance (rock);
+					rocklimit--;
 				}
 				if (foodlimit > 0) {
 					CreateInstance (food);
+					foodlimit--;
 				}
 
 
