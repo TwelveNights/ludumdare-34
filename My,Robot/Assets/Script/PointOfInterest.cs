@@ -14,6 +14,8 @@ namespace Assets.Script
 
         public List<POIAction> actions = new List<POIAction>();
 
+        public bool isResource;
+        public int availableGathers;
 
 
         // Use this for initialization
@@ -43,24 +45,30 @@ namespace Assets.Script
                 {
                     resource.ResourceCount += resource.ResourceGatheringAmount; //* >>location gathering modifier<< 
                     resource.ResourceGatheringElapsedTime = 0;
+                    if (availableGathers >= 0)
+                    {
+                        if(--availableGathers == 0) Destroy(gameObject);
+                
+                    }
                 }
                 else
                 {
                     resource.ResourceGatheringElapsedTime += Time.deltaTime;
                 }
             }
+
+
         }
 
         void OnMouseDown()
         {
             if (GameInfo.player.currPointOfInterest != this)
             {
+                GameInfo.EndAllActiveActions();
                 GameInfo.player.EnterPOI(transform, this);
                 foreach (string key in resourceToModify) GameInfo.player.resources[key].ResourceGatheringElapsedTime = 0;
-            }
-            else
-            {
-                foreach(POIAction action in actions)
+
+                foreach (POIAction action in actions)
                 {
                     action.DoAction();
                 }
