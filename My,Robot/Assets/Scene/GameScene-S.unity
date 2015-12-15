@@ -748,7 +748,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.76
+  orthographic size: 1.79
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -955,7 +955,7 @@ MonoBehaviour:
     ValModType: 0
     TargetResource: 
     ResModType: 0
-  UIModel: {fileID: 22439754, guid: e61dbb66b30910e42abf7005fe1d50db, type: 2}
+  UIModel: {fileID: 114024, guid: e61dbb66b30910e42abf7005fe1d50db, type: 2}
   a: 0
 --- !u!1 &839444248
 GameObject:
@@ -1593,6 +1593,7 @@ MonoBehaviour:
   availableGathers: 0
   resourceGained: {fileID: 0}
   resourceDeplete: {fileID: 0}
+  map: {fileID: 0}
 --- !u!4 &1165367288
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,6 +1802,9 @@ MonoBehaviour:
   minY: -2.5
   maxX: 2.5
   maxY: 2.5
+  foodDeleted: 0
+  deletedCoord: {x: 0, y: 0, z: 0}
+  mapCoordinates: []
 --- !u!212 &1357961543
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2210,7 +2214,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420072, guid: 09921f8c29bea7c48ac48bad5c63d898, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431304, guid: 09921f8c29bea7c48ac48bad5c63d898, type: 2}
+      propertyPath: map
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09921f8c29bea7c48ac48bad5c63d898, type: 2}
@@ -2252,8 +2260,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 465370, guid: 6fa9dbc157438e74c8261e07dd96e36c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11467260, guid: 6fa9dbc157438e74c8261e07dd96e36c, type: 2}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 1357961542}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fa9dbc157438e74c8261e07dd96e36c, type: 2}
   m_IsPrefabParent: 0
