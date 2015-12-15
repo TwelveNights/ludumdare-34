@@ -25,11 +25,15 @@ namespace Assets.Script.Modules
         public AudioClip failedSound;
         public AudioClip donModule;
 
+        public GameObject infoButton;
+        public GameObject textBox;
+
         public void Press()
         {
             if(module.Build())
             {
                 AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+                audio.loop = false;
                 audio.clip = donModule;
                 audio.Play();
                 BuildModule();
@@ -40,15 +44,34 @@ namespace Assets.Script.Modules
                 isShaking = true;
 
                 AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+                audio.loop = false;
                 audio.clip = failedSound;
                 audio.Play();
             }
             else
             {
                 AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+                audio.loop = false;
                 audio.clip = failedSound;
                 audio.Play();
             }
+        }
+
+        public void Hover()
+        {
+            Debug.Log(":ASDASD:");
+            infoButton = Instantiate(textBox, transform.position, Quaternion.identity) as GameObject;
+            infoButton.transform.Translate(new Vector3(160, -40, 0));
+
+            UnityEngine.UI.Text text = infoButton.GetComponentInChildren<UnityEngine.UI.Text>();
+            text.text = module.CreationCosts[0].ResourceName + ": " + module.CreationCosts[0].ResourceAmount;
+
+            infoButton.transform.SetParent(transform.parent);
+        }
+
+        public void UnHover()
+        {
+            Destroy(infoButton);
         }
 
         public void Update()

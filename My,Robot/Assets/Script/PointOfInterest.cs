@@ -19,6 +19,7 @@ namespace Assets.Script
 
         public AudioClip resourceGained;
         public AudioClip resourceDeplete;
+        public AudioClip resourceHarvest;
 
         public RandomMapGeneration map;
 
@@ -50,6 +51,14 @@ namespace Assets.Script
                     GameInfo.player.currPointOfInterest = this;
                     foreach (string key in resourceToModify) GameInfo.player.resources[key].ResourceGatheringElapsedTime = 0;
 
+                    if(isResource)
+                    {
+                        AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+                        audio.clip = resourceHarvest;
+                        audio.loop = true;
+                        audio.Play();
+                    }
+
                     foreach (POIAction action in actions)
                     {
                         action.DoAction();
@@ -68,6 +77,13 @@ namespace Assets.Script
                     foreach (POIAction action in actions)
                     {
                         action.EndAction();
+                    } 
+                    
+                    if (isResource)
+                    {
+                        AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+                        audio.loop = false;
+                        audio.Stop();
                     }
                 }
             }
@@ -87,6 +103,7 @@ namespace Assets.Script
 
                     AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
                     audio.clip = resourceGained;
+                    audio.loop = false;
                     audio.Play();
 
                     if (availableGathers >= 0)
@@ -114,6 +131,14 @@ namespace Assets.Script
                 else
                 {
                     resource.ResourceGatheringElapsedTime += Time.deltaTime;
+                    AudioSource audio = GameInfo.player.GetComponentInChildren<AudioSource>();
+
+                    if(!audio.isPlaying)
+                    {
+                        audio.clip = resourceHarvest;
+                        audio.loop = true;
+                        audio.Play();
+                    }
                 }
             }
 

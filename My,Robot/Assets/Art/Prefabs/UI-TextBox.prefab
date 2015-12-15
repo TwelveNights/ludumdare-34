@@ -11,7 +11,6 @@ GameObject:
   - 222: {fileID: 22258242}
   - 114: {fileID: 11444922}
   - 61: {fileID: 6150316}
-  - 114: {fileID: 11434254}
   m_Layer: 5
   m_Name: UI-TextBox
   m_TagString: Untagged
@@ -50,19 +49,6 @@ BoxCollider2D:
   m_Offset: {x: 36.34837, y: 1.648218}
   serializedVersion: 2
   m_Size: {x: 60.72389, y: 27.096308}
---- !u!114 &11434254
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!114 &11444922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,7 +97,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d0d0f4a5ce436104fb79e49fa38e138e, type: 3}
-    m_FontSize: 25
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -119,8 +105,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Close
 --- !u!222 &22258242
@@ -150,7 +136,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 8.7, y: -12.5}
-  m_SizeDelta: {x: 168.7, y: 80.5}
+  m_SizeDelta: {x: 180, y: 80.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22498842
 RectTransform:
@@ -168,7 +154,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 227.5098, y: -96}
-  m_SizeDelta: {x: 73, y: 33}
+  m_SizeDelta: {x: 100, y: 33}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1001 &100100000
 Prefab:
@@ -279,6 +265,26 @@ Prefab:
       propertyPath: m_Delegates.Array.data[0].callback.m_TypeName
       value: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0,
         Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SizeDelta.x
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
