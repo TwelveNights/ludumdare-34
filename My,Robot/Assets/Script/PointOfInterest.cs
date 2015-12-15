@@ -28,6 +28,9 @@ namespace Assets.Script
             m_POIName = gameObject.name;
             if (initialPOI) GameInfo.player.EnterPOI(transform, this);
             actions.AddRange(GetComponents<POIAction>());
+
+
+            
         }
 
         // Update is called once per frame

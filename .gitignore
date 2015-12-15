@@ -42,3 +42,4 @@ ehthumbs.db
 *.sln
 .gitconfig
 My,Robot/My,Robot.userprefs
+My,Robot/Release/
