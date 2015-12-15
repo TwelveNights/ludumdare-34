@@ -4,18 +4,15 @@ using Assets.Script;
 
 public class MovementScript : MonoBehaviour
 {
-
     Vector2 finalCoordinates = new Vector2(0, 0);
     Vector2 movementVector = new Vector2(0, 0);
     float stepDistance = 0.02f; //How far the player can step per frame.
     // Use this for initialization
     float angle = 0; //angle of velocity
-
-
-
+    public bool canMove;
+    
     void Start()
     {
-
     }
     /*  Movement Controls and Events will be placed in here. (Note that this is regarding player movement only) */
     // Update is called once per frame
@@ -25,7 +22,7 @@ public class MovementScript : MonoBehaviour
         Vector2 playerPosition = GameInfo.player.transform.position;
 
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && canMove)
         {
             Camera camera = Camera.main;
             Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
