@@ -14,6 +14,7 @@ namespace Assets.Script.Modules.UI
         public List<ResourceModule> availableResourceModules;
 
         public GameObject UIModel;
+        public float a;
 
         void Start()
         {

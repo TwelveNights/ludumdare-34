@@ -21,6 +21,8 @@ namespace Assets.Script
         public AudioClip resourceDeplete;
         public AudioClip resourceHarvest;
 
+        public RandomMapGeneration map;
+
 
         // Use this for initialization
         void Start()
@@ -113,7 +115,19 @@ namespace Assets.Script
                         {
                             audio.clip = resourceDeplete;
                             audio.Play();
+                            Vector3 temp = gameObject.transform.position;
+                            if(gameObject.name.Contains("food"))
+                            {
+                                map.foodDeleted = true;
+                            }
                             Destroy(gameObject);
+                            if(map.foodDeleted)
+                            {
+                                Debug.Log("Trigger");
+                                map.CreateInstance(map.food);
+                                map.mapCoordinates.Add(temp);
+                                map.foodDeleted = false;
+                            }
                         }
                     }
                 }
