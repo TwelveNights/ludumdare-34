@@ -92,6 +92,7 @@ MonoBehaviour:
   availableGathers: 5
   resourceGained: {fileID: 8300000, guid: 98fbe3fad77acdf40826ec797f9c5ab7, type: 3}
   resourceDeplete: {fileID: 8300000, guid: dea55253bcd5a504b8efb57e2d8f412c, type: 3}
+  resourceHarvest: {fileID: 8300000, guid: b1ca0087ecf666d418eb900f80ad2b99, type: 3}
 --- !u!212 &21209958
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -141,6 +142,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceHarvest
+      value: 
+      objectReference: {fileID: 8300000, guid: b1ca0087ecf666d418eb900f80ad2b99, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 174830}

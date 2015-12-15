@@ -13,6 +13,16 @@ namespace Assets.Script
 
         private List< Module > attachedModules;
 
+        //How much food Lily eats per second
+        public float LilyAppetite;
+        //How much pain Lily receives due to starvation
+        public float LilyStarvationPain;
+
+        //Tracks whenever it reaches a second
+        private float secondTracker = 0f;
+
+        private Random rand;
+
         void Awake()
         {
             GameInfo.player = this;
@@ -22,7 +32,8 @@ namespace Assets.Script
         // Use this for initialization
         void Start()
         {
-            attachedModules = new List<Module>();   
+            attachedModules = new List<Module>();
+            rand = new Random();
         }
 
         public void AttachModule(Module module)
@@ -36,6 +47,40 @@ namespace Assets.Script
         {
             // Debug.Log(currPointOfInterest.m_POIName);
             resources.UpdateUI();
+
+            if (secondTracker >= 1f)
+            {
+                HungryLily();
+                secondTracker = 0f;
+            }
+            else
+            {
+                secondTracker += Time.deltaTime;
+            }
+        }
+
+        protected void HungryLily()
+        {
+            if( resources["Food"].ResourceCount > 0)
+            {
+                resources["Food"].ResourceCount -= Mathf.Min(resources["Food"].ResourceCount, LilyAppetite);
+            }
+            else
+            {
+                HurtLily();
+            }
+        }
+
+        protected void HurtLily()
+        {
+            if (resources["Health"].ResourceCount >= 0)
+            {
+                resources["Health"].ResourceCount -= Mathf.Min(resources["Health"].ResourceCount, LilyStarvationPain);
+            }
+            else
+            {
+                //EndGame();
+            }
         }
 
         public void EnterPOI(Transform loc, PointOfInterest poi)

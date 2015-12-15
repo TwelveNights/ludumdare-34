@@ -10,7 +10,6 @@ GameObject:
   - 224: {fileID: 22439754}
   - 222: {fileID: 22257846}
   - 114: {fileID: 11486800}
-  - 61: {fileID: 6186736}
   - 114: {fileID: 11446950}
   - 114: {fileID: 11433738}
   m_Layer: 5
@@ -37,20 +36,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &6186736
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114024}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 36.348366, y: -16.425062}
-  serializedVersion: 2
-  m_Size: {x: 60.723885, y: 27.764114}
 --- !u!114 &11418974
 MonoBehaviour:
   m_ObjectHideFlags: 1
