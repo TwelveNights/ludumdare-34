@@ -13,7 +13,7 @@ namespace Assets.Script.Modules.UI
         private List<Module> availableModules;
         public List<ResourceModule> availableResourceModules;
 
-        public Transform UIModel;
+        public GameObject UIModel;
 
         public float a;
 
