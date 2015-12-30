@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="Tiles" tilewidth="32" tileheight="32" tilecount="10">
+  <tile id="0">
+   <image width="32" height="32" source="../chrome/chrome_tile.png"/>
+  </tile>
+  <tile id="1">
+   <image width="32" height="32" source="../chrome/e_wall.png"/>
+  </tile>
+  <tile id="2">
+   <image width="32" height="32" source="../chrome/n_wall.png"/>
+  </tile>
+  <tile id="3">
+   <image width="32" height="32" source="../chrome/ne_wall.png"/>
+  </tile>
+  <tile id="4">
+   <image width="32" height="32" source="../chrome/nw_wall.png"/>
+  </tile>
+  <tile id="5">
+   <image width="32" height="32" source="../chrome/s_door.png"/>
+  </tile>
+  <tile id="6">
+   <image width="32" height="32" source="../chrome/se_wall.png"/>
+  </tile>
+  <tile id="7">
+   <image width="32" height="32" source="../chrome/south_chrome_wall.png"/>
+  </tile>
+  <tile id="8">
+   <image width="32" height="32" source="../chrome/sw_wall.png"/>
+  </tile>
+  <tile id="9">
+   <image width="32" height="32" source="../chrome/w_wall.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="11" name="Outside" tilewidth="32" tileheight="32" tilecount="11">
+  <tile id="0">
+   <image width="32" height="32" source="../grassdirt/dirt_tile_mk3.png"/>
+  </tile>
+  <tile id="1">
+   <image width="32" height="32" source="../grassdirt/grass_dirt_bottom.png"/>
+  </tile>
+  <tile id="2">
+   <image width="32" height="32" source="../grassdirt/grass_dirt_bottomleft.png"/>
+  </tile>
+  <tile id="3">
+   <image width="32" height="32" source="../grassdirt/grass_dirt_bottomright.png"/>
+  </tile>
+  <tile id="4">
+   <image width="32" height="32" source="../grassdirt/grass_dirt_left.png"/>
+  </tile>
+  <tile id="5">
+   <image width="32" height="32" source="../grassdirt/grass_dirt_left_mk3.png"/>
+  </tile>
+  <tile id="6">
+   <image width="32" height="32" source="../grassdirt/grass_dirt_right_mk3.png"/>
+  </tile>
+  <tile id="7">
+   <image width="32" height="32" source="../grassdirt/grass_dirt_top.png"/>
+  </tile>
+  <tile id="8">
+   <image width="32" height="32" source="../grassdirt/grass_dirt_topleft.png"/>
+  </tile>
+  <tile id="9">
+   <image width="32" height="32" source="../grassdirt/grass_dirt_topright.png"/>
+  </tile>
+  <tile id="10">
+   <image width="32" height="32" source="../grassdirt/grass_tile_mk1.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="22" name="Doodas" tilewidth="32" tileheight="32" tilecount="4">
+  <tile id="0">
+   <image width="32" height="32" source="../doodads/food_bush.png"/>
+  </tile>
+  <tile id="1">
+   <image width="32" height="32" source="../doodads/laptop.png"/>
+  </tile>
+  <tile id="2">
+   <image width="32" height="32" source="../doodads/rock_turd.png"/>
+  </tile>
+  <tile id="3">
+   <image width="32" height="32" source="../doodads/table.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="26" name="lazy_shitty_tree" tilewidth="32" tileheight="32" tilecount="4">
+  <image source="../lazy_shitty_tree.png" width="64" height="64"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztzbsNACAIQEF6P1GU/VeVASgxMeYVV5+JiAF42nIa2InHcCUwOb49mquBnngAuOcA5iUx0Q==
+  </data>
+ </layer>
+ <layer name="House" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF9ARCSFiECPV8ZNjBD8TcUCxIhn5iAC8Q8yDhwQqEGYgLZ0oAKCzIiSdSAAsQM2PBrFS0gwmIGbFgrlE7hq0d7EDMAcVsSGxOKtoxVAHvQDsABxCmgx2w8n0UDH4AACXlAd4=
+  </data>
+ </layer>
+ <layer name="House2" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztzcEJACAMBMEYlWj/DXsPWzgQ3IF9bwSA1w3V1TQ+UrWbS6mltvEBAL846SwAKQ==
+  </data>
+ </layer>
+ <layer name="House3" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztzbENACAMxMBAQMD+C+cLeqqn8kmuHQEAfwyVahofXbWby1JbHeMDAF4KyewAKQ==
+  </data>
+ </layer>
+ <layer name="House4" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztzbENACAMxMAAQYT9F84XLEDxnU9y7QgAwI9US23jY6rxcjmq1DU+APg0qqwAKQ==
+  </data>
+ </layer>
+ <layer name="Objects" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJyTYmBgkAZiKRrRDEhsGSCWpQGNbActADY/jdoxasdIsEOSDnYQA0btGLVj1I5RO2hhx1Bt88DYAGv/Exg=
+  </data>
+ </layer>
+ <layer name="Doodads" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALsQHygHTAKRsEoGAWjACcAAIuAABg=
+  </data>
+ </layer>
+</map>
